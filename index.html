@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MellowFit - Move, Give, and Grow</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'brand': '#5b7dfe',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .hero-gradient {
+            background: linear-gradient(135deg, #5b7dfe 0%, #6b8dff 25%, #4a6dfd 50%, #7ba0ff 75%, #5b7dfe 100%);
+            background-size: 200% 200%;
+            animation: gradientShift 10s ease infinite;
+        }
+        
+        @keyframes gradientShift {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+    </style>
+</head>
+<body class="font-sans text-gray-800 overflow-x-hidden">
+    <section class="hero-gradient text-white py-24 text-center relative overflow-hidden" id="home">
+        <div class="max-w-7xl mx-auto px-5 relative z-10">
+            <img src="images/logo.svg" alt="MellowFit Logo" class="h-16 md:h-20 mx-auto mb-6 hero-logo">
+            <h1 class="text-5xl md:text-6xl font-extrabold mb-4 tracking-tight hero-title">MellowFit</h1>
+            <p class="text-xl md:text-2xl mb-8 opacity-95 max-w-3xl mx-auto hero-subtitle">Join the challenge. Move, give, and grow with MellowFit — the fitness community where every workout fuels real-world impact.</p>
+            <a href="#features" class="inline-block px-10 py-4 bg-white text-brand rounded-full font-semibold text-lg no-underline transition-all hover:-translate-y-0.5 hover:shadow-xl hero-button">Join the Challenge</a>
+        </div>
+    </section>
+
+    <section class="py-20 bg-gray-50" id="features">
+        <div class="max-w-7xl mx-auto px-5">
+            <h2 class="text-4xl text-center mb-12 text-gray-800 font-bold features-title">Why you'll love MellowFit</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="bg-white p-10 rounded-2xl shadow-lg transition-all hover:-translate-y-1 hover:shadow-xl feature-card">
+                    <img src="images/1.png" alt="Join Challenges" class="w-20 h-20 mb-4 mx-auto object-contain">
+                    <h3 class="text-2xl mb-4 text-gray-800">Join Challenges</h3>
+                    <p class="text-gray-600 leading-relaxed">Commit to weekly workouts, track your sessions, and stay accountable.</p>
+                </div>
+                <div class="bg-white p-10 rounded-2xl shadow-lg transition-all hover:-translate-y-1 hover:shadow-xl feature-card">
+                    <img src="images/2.png" alt="Give Back" class="w-20 h-20 mb-4 mx-auto object-contain">
+                    <h3 class="text-2xl mb-4 text-gray-800">Give Back</h3>
+                    <p class="text-gray-600 leading-relaxed">Missed a workout? Your fine becomes a donation to social causes.</p>
+                </div>
+                <div class="bg-white p-10 rounded-2xl shadow-lg transition-all hover:-translate-y-1 hover:shadow-xl feature-card">
+                    <img src="images/3.png" alt="Community Feed" class="w-20 h-20 mb-4 mx-auto object-contain">
+                    <h3 class="text-2xl mb-4 text-gray-800">Community Feed</h3>
+                    <p class="text-gray-600 leading-relaxed">Post your evidence, cheer on others, and stay motivated.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-20" id="about">
+        <div class="max-w-7xl mx-auto px-5">
+            <div class="max-w-4xl mx-auto text-center">
+                <h2 class="text-4xl mb-6 text-gray-800 about-title">Welcome to MellowFit</h2>
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-8">
+                    <img src="images/4.png" alt="MellowFit Community" class="w-full rounded-lg shadow-md about-image">
+                    <img src="images/5.png" alt="MellowFit Fitness" class="w-full rounded-lg shadow-md about-image">
+                    <img src="images/6.png" alt="MellowFit Impact" class="w-full rounded-lg shadow-md about-image">
+                    <img src="images/7.png" alt="MellowFit Community" class="w-full rounded-lg shadow-md about-image">
+                </div>
+                <p class="text-lg text-gray-600 leading-relaxed mb-4 about-text">Welcome to MellowFit, the community-driven fitness challenge that makes staying active more meaningful. Here, every workout counts — not just for you, but for others too.</p>
+                <p class="text-lg text-gray-600 leading-relaxed mb-4 about-text">MellowFit turns your daily exercise into a fun, social, and purposeful experience. Train, share your progress, and join a community that supports your goals while giving back to meaningful causes.</p>
+                <p class="text-lg text-gray-600 leading-relaxed mb-4 about-text">Whether you're starting your fitness journey or leveling up your consistency, MellowFit keeps you moving — body, mind, and heart.</p>
+                <p class="text-xl text-gray-800 font-semibold mt-8 about-text">Because here, we don't just train. We change.</p>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-gray-800 text-white py-12 text-center" id="contact">
+        <div class="max-w-7xl mx-auto px-5">
+            <p class="opacity-80">&copy; 2024 MellowFit. All rights reserved.</p>
+            <p class="mt-4 opacity-80">Join the challenge. Move, give, and grow.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Register ScrollTrigger plugin
+        gsap.registerPlugin(ScrollTrigger);
+
+        // Hero animations on page load
+        const heroTimeline = gsap.timeline();
+        heroTimeline
+            .from('.hero-logo', {
+                duration: 1,
+                y: 30,
+                opacity: 0,
+                scale: 0.8,
+                ease: 'power3.out'
+            })
+            .from('.hero-title', {
+                duration: 1,
+                y: 50,
+                opacity: 0,
+                ease: 'power3.out'
+            }, '-=0.5')
+            .from('.hero-subtitle', {
+                duration: 0.8,
+                y: 30,
+                opacity: 0,
+                ease: 'power3.out'
+            }, '-=0.5')
+            .from('.hero-button', {
+                duration: 0.8,
+                y: 20,
+                opacity: 0,
+                scale: 0.9,
+                ease: 'back.out(1.7)'
+            }, '-=0.3');
+
+        // Features title animation
+        gsap.from('.features-title', {
+            scrollTrigger: {
+                trigger: '.features-title',
+                start: 'top 85%',
+                toggleActions: 'play none none none'
+            },
+            duration: 0.8,
+            y: 30,
+            opacity: 0,
+            ease: 'power2.out'
+        });
+
+        // Feature cards animation on scroll
+        gsap.utils.toArray('.feature-card').forEach((card, index) => {
+            gsap.from(card, {
+                scrollTrigger: {
+                    trigger: card,
+                    start: 'top 85%',
+                    toggleActions: 'play none none none'
+                },
+                duration: 0.8,
+                y: 50,
+                opacity: 0,
+                ease: 'power2.out',
+                delay: index * 0.1
+            });
+        });
+
+        // About section animation
+        gsap.from('.about-title', {
+            scrollTrigger: {
+                trigger: '.about-title',
+                start: 'top 85%',
+                toggleActions: 'play none none none'
+            },
+            duration: 0.8,
+            y: 30,
+            opacity: 0,
+            ease: 'power2.out'
+        });
+
+        gsap.utils.toArray('.about-text').forEach((text, index) => {
+            gsap.from(text, {
+                scrollTrigger: {
+                    trigger: text,
+                    start: 'top 85%',
+                    toggleActions: 'play none none none'
+                },
+                duration: 0.8,
+                y: 20,
+                opacity: 0,
+                ease: 'power2.out',
+                delay: index * 0.2
+            });
+        });
+
+        // About images animation
+        gsap.utils.toArray('.about-image').forEach((image, index) => {
+            gsap.from(image, {
+                scrollTrigger: {
+                    trigger: image,
+                    start: 'top 85%',
+                    toggleActions: 'play none none none'
+                },
+                duration: 0.8,
+                y: 30,
+                opacity: 0,
+                scale: 0.9,
+                ease: 'power2.out',
+                delay: index * 0.1
+            });
+        });
+
+        // Floating animation for hero button
+        gsap.to('.hero-button', {
+            y: -10,
+            duration: 2,
+            ease: 'power1.inOut',
+            yoyo: true,
+            repeat: -1
+        });
+    </script>
+</body>
+</html>
