@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Soporte - MellowFit</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'brand': '#5b7dfe',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .hero-gradient {
+            background: linear-gradient(135deg, #5b7dfe 0%, #6b8dff 25%, #4a6dfd 50%, #7ba0ff 75%, #5b7dfe 100%);
+            background-size: 200% 200%;
+            animation: gradientShift 10s ease infinite;
+        }
+        
+        @keyframes gradientShift {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+    </style>
+</head>
+<body class="font-sans text-gray-800 overflow-x-hidden">
+    <!-- Header -->
+    <header class="hero-gradient text-white py-6">
+        <div class="max-w-7xl mx-auto px-5">
+            <div class="flex items-center justify-between">
+                <a href="/" class="flex items-center gap-3">
+                    <img src="images/logo.svg" alt="Logo de MellowFit" class="h-12 bg-white rounded-lg p-2">
+                    <span class="text-2xl font-bold">MellowFit</span>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="py-12 md:py-20">
+        <div class="max-w-4xl mx-auto px-5">
+            <h1 class="text-4xl md:text-5xl font-bold text-gray-800 mb-8">Soporte</h1>
+            
+            <div class="prose prose-lg max-w-none text-gray-700 space-y-8">
+                <section>
+                    <h2 class="text-2xl font-semibold text-gray-800 mt-8 mb-4">¿Necesitas Ayuda?</h2>
+                    <p class="text-lg leading-relaxed">
+                        Estamos aquí para ayudarte. Si tienes alguna pregunta, problema técnico o necesitas asistencia con tu cuenta de MellowFit, no dudes en contactarnos.
+                    </p>
+                </section>
+
+                <section class="bg-gray-50 p-8 rounded-lg">
+                    <h2 class="text-2xl font-semibold text-gray-800 mb-4">Contáctanos</h2>
+                    <p class="text-lg mb-4">
+                        Envíanos un correo electrónico y te responderemos lo antes posible:
+                    </p>
+                    <div class="mt-6">
+                        <a href="mailto:contacto@mellowfit.mx" class="inline-flex items-center gap-2 text-brand hover:text-blue-600 font-semibold text-xl">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+                            </svg>
+                            contacto@mellowfit.mx
+                        </a>
+                    </div>
+                </section>
+
+                <section>
+                    <h2 class="text-2xl font-semibold text-gray-800 mt-8 mb-4">Preguntas Frecuentes</h2>
+                    <div class="space-y-6">
+                        <div>
+                            <h3 class="text-xl font-semibold text-gray-800 mb-2">¿Cómo puedo crear una cuenta?</h3>
+                            <p class="text-gray-600">
+                                Puedes crear una cuenta directamente desde nuestra aplicación móvil o sitio web. Solo necesitas proporcionar tu correo electrónico y crear una contraseña segura.
+                            </p>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-semibold text-gray-800 mb-2">¿Olvidé mi contraseña?</h3>
+                            <p class="text-gray-600">
+                                No te preocupes. Puedes restablecer tu contraseña usando la opción "¿Olvidaste tu contraseña?" en la pantalla de inicio de sesión. Recibirás un enlace por correo electrónico para crear una nueva contraseña.
+                            </p>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-semibold text-gray-800 mb-2">¿Cómo puedo reportar un problema técnico?</h3>
+                            <p class="text-gray-600">
+                                Si encuentras algún problema técnico o error en la aplicación, por favor envíanos un correo a contacto@mellowfit.mx con una descripción detallada del problema y te ayudaremos a resolverlo.
+                            </p>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-semibold text-gray-800 mb-2">¿Cuánto tiempo tarda la respuesta?</h3>
+                            <p class="text-gray-600">
+                                Nos esforzamos por responder a todas las consultas en un plazo de 24 a 48 horas hábiles. Para problemas urgentes, haremos nuestro mejor esfuerzo para responder más rápido.
+                            </p>
+                        </div>
+                    </div>
+                </section>
+
+                <section>
+                    <h2 class="text-2xl font-semibold text-gray-800 mt-8 mb-4">Información Adicional</h2>
+                    <p class="text-lg leading-relaxed">
+                        Si tienes preguntas sobre nuestra política de privacidad o términos de servicio, puedes consultar nuestras páginas de <a href="/privacidad.html" class="text-brand hover:underline">Política de Privacidad</a>.
+                    </p>
+                </section>
+            </div>
+
+            <!-- Back to Home Link -->
+            <div class="mt-12 pt-8 border-t border-gray-200">
+                <a href="/" class="text-brand hover:underline font-semibold">← Volver al inicio</a>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-12 text-center mt-16">
+        <div class="max-w-7xl mx-auto px-5">
+            <p class="opacity-80">&copy; 2024 MellowFit. Todos los derechos reservados.</p>
+            <p class="mt-4 opacity-80">Únete al desafío. Muévete, dona y crece.</p>
+            <p class="mt-4 opacity-60 text-sm space-x-4">
+                <a href="/soporte.html" class="hover:underline">Soporte</a>
+                <span>•</span>
+                <a href="/privacidad.html" class="hover:underline">Política de Privacidad</a>
+            </p>
+        </div>
+    </footer>
+</body>
+</html>
+
