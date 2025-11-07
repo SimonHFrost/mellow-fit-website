@@ -18,7 +18,7 @@
     </script>
     <style>
         .hero-gradient {
-            background: linear-gradient(135deg, #5b7dfe 0%, #6b8dff 25%, #4a6dfd 50%, #7ba0ff 75%, #5b7dfe 100%);
+            background: linear-gradient(135deg, #5b7dfe 0%, #e8edff 20%, #6b8dff 40%, #4a6dfd 60%, #7ba0ff 80%, #5b7dfe 100%);
             background-size: 200% 200%;
             animation: gradientShift 10s ease infinite;
         }
@@ -31,11 +31,27 @@
     </style>
 </head>
 <body class="font-sans text-gray-800 overflow-x-hidden">
-    <section class="hero-gradient text-white py-24 md:py-32 text-center relative overflow-hidden" id="home">
+    <!-- Header -->
+    <header class="bg-white border-b border-gray-200 sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-5 py-4">
+            <div class="flex items-center justify-between">
+                <a href="/" class="flex items-center gap-3">
+                    <img src="images/logo.svg" alt="Logo de MellowFit" class="h-10 bg-white border-2 border-brand rounded-lg p-2">
+                    <span class="text-xl font-bold text-gray-800">MellowFit</span>
+                </a>
+                <nav class="flex items-center gap-6">
+                    <a href="/soporte.html" class="text-gray-700 hover:text-brand transition-colors">Soporte</a>
+                    <a href="/privacidad.html" class="text-gray-700 hover:text-brand transition-colors">Privacidad</a>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <section class="hero-gradient py-24 md:py-32 text-center relative overflow-hidden" id="home">
         <div class="max-w-7xl mx-auto px-5 relative z-10">
             <div class="flex items-center justify-center gap-4 mb-10 hero-title-container">
-                <img src="images/logo.svg" alt="Logo de MellowFit" class="h-16 md:h-20 bg-white rounded-lg p-2 hero-logo">
-                <h1 class="text-5xl md:text-6xl font-extrabold tracking-tight hero-title">MellowFit</h1>
+                <img src="images/logo.svg" alt="Logo de MellowFit" class="h-16 md:h-20 bg-white rounded-lg p-2 hero-logo shadow-lg">
+                <h1 class="text-5xl md:text-6xl font-extrabold tracking-tight hero-title text-gray-800 drop-shadow-lg">MellowFit</h1>
             </div>
         </div>
     </section>
